@@ -12,13 +12,14 @@ let convert (number: int): string =
         else None
     
     let fs = [
-        hasFactor (number, 3, "Pling"); 
-        hasFactor (number, 5, "Plang"); 
-        hasFactor (number, 7, "Plong");
+        (3, "Pling"); 
+        (5, "Plang"); 
+        (7, "Plong");
     ]
 
     let result = 
-        List.filter (fun x -> not(x = None)) fs 
+        List.map (fun (x, y) -> hasFactor(number, x, y)) fs
+        |> List.filter (fun x -> not(x = None)) 
         |> List.distinct 
         |> List.map (fun x -> x.Value)
 
