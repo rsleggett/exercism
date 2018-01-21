@@ -1,6 +1,9 @@
 class HelloWorld {
-    static hello( /* Parameters go here */ ) {
-        // Your code here
+    static hello(name?: String) {
+        if (!name) {
+            name = "World"
+        }
+        return `Hello, ${name}!`
     }
 }
 
