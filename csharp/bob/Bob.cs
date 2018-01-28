@@ -3,20 +3,30 @@ using System.Linq;
 
 public static class Bob
 {
-    public static string Response(string statement)
+    public static string Response(string input)
     {
-        if (string.IsNullOrWhiteSpace(statement))
+        if (string.IsNullOrWhiteSpace(input))
         {
             return "Fine. Be that way!";
         }
-        if (statement.Any(char.IsLetter) && statement.Where(char.IsLetter).All(char.IsUpper))
+        if (IsShouting(input))
         {
             return "Whoa, chill out!";
         }
-        if (statement.Trim().EndsWith("?"))
+        if (IsQuestion(input))
         {
             return "Sure.";
         }
         return "Whatever.";
+    }
+
+    private static bool IsQuestion(string input)
+    {
+        return input.Trim().EndsWith("?");
+    }
+
+    private static bool IsShouting(string input)
+    {
+        return input.Any(char.IsLetter) && input.Where(char.IsLetter).All(char.IsUpper);
     }
 }
