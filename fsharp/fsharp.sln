@@ -21,6 +21,8 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Accumulate", "accumulate\Ac
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "GradeSchool", "grade-school\GradeSchool.fsproj", "{088A1283-F8DC-497B-BA82-9AE3A4A8FB24}"
 EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "CollatzConjecture", "collatz-conjecture\CollatzConjecture.fsproj", "{28F107F4-433B-4F01-951B-CA35D27C172B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{088A1283-F8DC-497B-BA82-9AE3A4A8FB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{088A1283-F8DC-497B-BA82-9AE3A4A8FB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{088A1283-F8DC-497B-BA82-9AE3A4A8FB24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F107F4-433B-4F01-951B-CA35D27C172B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F107F4-433B-4F01-951B-CA35D27C172B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F107F4-433B-4F01-951B-CA35D27C172B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F107F4-433B-4F01-951B-CA35D27C172B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
