@@ -1,14 +1,14 @@
 class Bob {
 
-    hey(statement: String): String {
-        let trimmed = statement.trim();
-        if(this.isShouting(trimmed)) {
+    hey(statement: string): string {
+        const trimmed = statement.trim()
+        if (this.isShouting(trimmed)) {
             return "Whoa, chill out!"
         }
-        else if(this.isQuestion(trimmed)){
+        else if (this.isQuestion(trimmed)) {
             return "Sure."
         }
-        else if(this.isSilence(trimmed)){
+        else if (this.isSilence(trimmed)) {
             return "Fine. Be that way!"
         }
         else {
@@ -16,17 +16,17 @@ class Bob {
         }
     }
 
-    private isShouting(statement: String): Boolean {
-        let letters = statement.match("[A-Za-zäöüß]+")
-        let uppercase = letters != null ? letters.filter(x => x == x.toUpperCase()):[]
-        return letters != null && letters.length > 0 && uppercase != null && letters.length == uppercase.length
+    private isShouting(statement: string): boolean {
+        const letters = statement.match("[A-Za-zäöüß]+")
+        const uppercase = letters !== null ? letters.filter((x) => x === x.toUpperCase()) : []
+        return letters !== null && letters.length > 0 && uppercase !== null && letters.length === uppercase.length
     }
 
-    private isSilence(statement: String): Boolean {
-        return !statement || statement.length == 0
+    private isSilence(statement: string): boolean {
+        return !statement || statement.length === 0
     }
 
-    private isQuestion(statement: String): Boolean {
+    private isQuestion(statement: string): boolean {
         return statement.endsWith("?")
     }
 }

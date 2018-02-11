@@ -25,7 +25,7 @@ export function calculatePrimeFactors(input: number): number[] {
         result.concat(calculatePrimeFactors(input / 2))
         input = input / 2
     }
-    
+
     if (input > 2) {
         result.push(input)
     }
